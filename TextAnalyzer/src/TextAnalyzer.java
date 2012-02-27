@@ -20,9 +20,10 @@ public class TextAnalyzer {
 	 */
 	public static void main(String[] args) {
 		Scanner scanner = null;
+		String fileName = args[0];
 		Map<String, Integer> tokenToCountMap = new TreeMap<String, Integer>(new TextAnalyzerComparator());
 		 try {
-			scanner = new Scanner(new BufferedReader(new FileReader("testfiles/test1")));
+			scanner = new Scanner(new BufferedReader(new FileReader("testfiles/" + fileName)));
 			
 			while(scanner.hasNext()) {
 				String token = scanner.next();

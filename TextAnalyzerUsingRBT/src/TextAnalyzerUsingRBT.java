@@ -8,13 +8,13 @@ import java.util.Scanner;
  * takes an input file, analyzes it and provides
  * a report on the contents of the file.
  * 
- * Instead of using java collections this uses a custom BST 
- * to insert the keys in a sorted order
+ * Instead of using java collections this uses a custom Red
+ * Black tree implementation to insert the keys in a sorted order
  * 
  * @author praveen
  *
  */
-public class TextAnalyzerUsingBST {
+public class TextAnalyzerUsingRBT {
 
 	/**
 	 * @param args
@@ -23,14 +23,14 @@ public class TextAnalyzerUsingBST {
 		Scanner scanner = null;
 		String fileName = args[0];
 		// create new BST
-		BST binarySearchTree = new BST(new TextAnalyzerComparator());
+		RBT redBlackTree = new RBT(new TextAnalyzerComparator());
 		 try {
 			scanner = new Scanner(new BufferedReader(new FileReader("testfiles/" + fileName)));
 			
 			while(scanner.hasNext()) {
 				String token = scanner.next();
 				// insert to BST
-				binarySearchTree.insert(token);
+				redBlackTree.insert(token);
 			}
 			
 		} catch (FileNotFoundException e) {
@@ -42,7 +42,7 @@ public class TextAnalyzerUsingBST {
 		}
 		 
 		// print the BST
-		binarySearchTree.print();
+		redBlackTree.print();
 
 	}
 
