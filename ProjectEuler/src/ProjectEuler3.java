@@ -26,8 +26,6 @@ public class ProjectEuler3 {
 			sumOfNaturalNos += i;
 			sumOfSquares += (i*i);
 		}
-		System.out.println(sumOfNaturalNos);
-		System.out.println(sumOfSquares);
 		long squareOfSumOfNaturalNos = sumOfNaturalNos * sumOfNaturalNos;
 		System.out.println(squareOfSumOfNaturalNos - sumOfSquares);
 		
