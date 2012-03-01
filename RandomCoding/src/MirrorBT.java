@@ -1,14 +1,14 @@
 
-public class MirrorBST {
+public class MirrorBT {
 
 
-	void mirror(BSTNode node) {
+	void mirror(BTNode node) {
 		
 		if(node == null) {
 			return;
 		}
 		
-		BSTNode tempNode = node.getLeftChild();
+		BTNode tempNode = node.getLeftChild();
 		node.setLeftChild(node.getRightChild());
 		node.setRightChild(tempNode);
 		
