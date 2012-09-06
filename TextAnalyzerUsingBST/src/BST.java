@@ -83,6 +83,7 @@ public class BST {
 	 * 
 	 * @param node
 	 */
+	@SuppressWarnings("unused")
 	private void printUsingRecursion(BSTNode node) {
 
 		if (node == null) {

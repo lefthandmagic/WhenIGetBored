@@ -173,6 +173,7 @@ public class RBT {
 	 * 
 	 * @param node
 	 */
+	@SuppressWarnings("unused")
 	private void printUsingRecursion(RBTNode node) {
 
 		if (node == null) {
